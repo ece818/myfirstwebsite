@@ -19,6 +19,7 @@ body {
   gap: 0.25rem; /* space between title, artist and audio */
   flex: 1; /* let text column fill remaining space */
 }
+
 .header {
   display: flex;
   align-items: center;
