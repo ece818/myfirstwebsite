@@ -13,20 +13,26 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.header-info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem; /* space between title, artist and audio */
-  flex: 1; /* let text column fill remaining space */
+
+/* shared width and centering */
+.header,
+.box {
+  width: 95%;
+  max-width: 900px; /* optional cap on large screens */
+  margin: 1rem auto;
+  background-color: #000000e8;
 }
 
+/* header layout: image + text column on desktop, stacked on narrow screens */
 .header {
   display: flex;
   align-items: center;
   gap: 1rem;
-  background-color: #000000e8;
-  margin: 1px auto;
-  width: 75%;
+}
+.header-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 #artist {
@@ -69,7 +75,6 @@ body {
   border: 2px solid black;
   padding: 15px;
   margin: 10px auto;
-  width: 75%;
 }
 .box:hover {
   background-color: #000000e8;
@@ -89,4 +94,23 @@ body {
   text-align: center;
   font-size: larger;
   color: white;
+}
+
+/* mobile: stack header items and ensure content fits viewport */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.75rem;
+  }
+  #artistphoto {
+    width: 40vw;
+    max-width: 180px;
+    padding: 0.5rem;
+  }
+  .header,
+  .box {
+    width: 95%;
+    margin: 0.5rem auto;
+  }
 }
