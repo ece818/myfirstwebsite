@@ -9,6 +9,9 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .header-info {
   display: flex;
