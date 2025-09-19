@@ -29,6 +29,7 @@ body {
   color: rgb(255, 255, 255);
   padding-top: -10px;
   display: block;
+  text-align: center;
 
   /* padding-left: 50px; */
 }
@@ -84,10 +85,4 @@ body {
   text-align: center;
   font-size: larger;
   color: white;
-}
-
-.audio-container {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
 }
